@@ -1,0 +1,108 @@
+# ============================================
+# Unity 3D URP Project - .gitignore
+# ============================================
+
+# ============ Unity Generated ============
+
+# 빌드 결과물 및 캐시
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]in/
+[Bb]uild/
+[Bb]uilds/
+MemoryCaptures/
+Salmon/UserSettings/
+*.stacktrace
+
+# Unity 프로젝트 파일 무시
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+
+# 디버그 및 로그
+*.log
+*.mdb
+*.opendb
+*.pdb
+sysinfo.txt
+
+# Unity 패키지 빌드 결과 (예: Android, iOS)
+*.apk
+*.aab
+*.ipa
+*.xcarchive
+
+# URP / HDRP 관련 자동 생성 파일
+Assets/**/ShaderCache/
+Assets/**/LightingData.asset
+Assets/**/LightmapSnapshot.asset
+Assets/**/ReflectionProbe-*.exr
+Assets/**/GITexture/
+Assets/**/SceneLightingSettings.asset
+
+# Addressables
+Assets/AddressableAssetsData/*/AssetBundles/
+
+# Lightmaps / GI 데이터
+Assets/**/Lightmap-*.* 
+Assets/**/GlobalIllumination.asset
+Assets/**/LightingData.asset
+
+# StreamingAssets (빌드 시 생성)
+Assets/StreamingAssets/**/*.*
+!Assets/StreamingAssets/
+
+# ============ IDE 및 툴 ============
+
+# Visual Studio
+.vs/
+.vscode/
+*.sln.iml
+
+# JetBrains Rider
+.idea/
+
+# ============ OS 관련 무시 항목 ============
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# ============ Unity 서비스 관련 ============
+
+# Collaborate
+.collabignore
+
+# Plastic SCM
+PlasticSCM/
+
+# Cloud Build
+.cloud/
+
+# ============ 환경 설정 (보안) ============
+
+# 환경 설정
+.env
+
+# ============ 대용량 에셋 Git 추적 제외 ============
+
+# 기존 LFS 추적 대상 폴더 무시
+Salmon/Assets/AssetPackages/
+
+# ============ 제외 규칙 (Git 추적 유지) ============
+
+!Assets/
+!ProjectSettings/
+!Packages/
+
