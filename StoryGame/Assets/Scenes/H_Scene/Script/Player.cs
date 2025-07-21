@@ -4,35 +4,45 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     Rigidbody2D rigidbody2D;
+    Vector2 moveInput;
+
+    private bool _isJumping = false;
 
     [SerializeField]
-    private float moveSpeed = 4;
+    private float moveSpeed = 4f;
+    [SerializeField]
+    private float JUMP_FORCE = 10f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    void Awake()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-
+        rigidbody2D.linearVelocity = new Vector2(moveInput.x * moveSpeed, rigidbody2D.linearVelocity.y);
     }
 
     public void OnMove(InputValue inputValue)
     {
-        float input = inputValue.Get<Vector2>().x;
+        moveInput = inputValue.Get<Vector2>();
+    }
 
-        //Debug.Log("Key : " + input);
-
-        if (Mathf.Abs(input) > 0)
+    public void OnJump(InputValue inputValue)
+    {
+        if (!_isJumping)
         {
-            rigidbody2D.linearVelocity = input * Vector2.right * moveSpeed;
+            _isJumping = true;
+            rigidbody2D.linearVelocity = new Vector2(rigidbody2D.linearVelocity.x, JUMP_FORCE);
         }
-        else
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
         {
-            rigidbody2D.linearVelocity = Vector2.zero;
+            _isJumping = false;
         }
     }
 }
