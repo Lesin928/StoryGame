@@ -9,10 +9,15 @@ public class Player : MonoBehaviour
     private bool _isJumping = false;
 
     [SerializeField]
-    private float moveSpeed = 4f;
+    private float MoveSpeed = 4f;
     [SerializeField]
     private float JUMP_FORCE = 10f;
+    [SerializeField]
+    private float SlowSpeed = 2f;
 
+    float CurrentSpeed => IsSlowingDown ? SlowSpeed : MoveSpeed;
+
+    bool IsSlowingDown = false;
 
     void Awake()
     {
@@ -21,12 +26,17 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        rigidbody2D.linearVelocity = new Vector2(moveInput.x * moveSpeed, rigidbody2D.linearVelocity.y);
+        rigidbody2D.linearVelocity = new Vector2(moveInput.x * CurrentSpeed, rigidbody2D.linearVelocity.y);
     }
 
     public void OnMove(InputValue inputValue)
     {
         moveInput = inputValue.Get<Vector2>();
+    }
+
+    public void OnWalk(InputValue inputValue)
+    {
+        IsSlowingDown = inputValue.isPressed;
     }
 
     public void OnJump(InputValue inputValue)
