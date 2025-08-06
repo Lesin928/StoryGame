@@ -8,7 +8,7 @@ public class MainCameraController : MonoBehaviour
     [SerializeField] Vector2 maxCameraBoundary;
     private void FixedUpdate()
     {
-        Vector3 targetPos = new Vector3(player.position.x, player.position.y, this.transform.position.z);
+        Vector3 targetPos = new Vector3(player.position.x, player.position.y + 1.5f, this.transform.position.z);
 
         targetPos.x = Mathf.Clamp(targetPos.x, minCameraBoundary.x, maxCameraBoundary.x);
         targetPos.y = Mathf.Clamp(targetPos.y, minCameraBoundary.y, maxCameraBoundary.y);

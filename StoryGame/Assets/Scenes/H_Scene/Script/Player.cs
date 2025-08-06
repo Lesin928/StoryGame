@@ -43,8 +43,11 @@ public class Player : MonoBehaviour
     {
         if (!_isJumping)
         {
-            _isJumping = true;
-            rigidbody2D.linearVelocity = new Vector2(rigidbody2D.linearVelocity.x, JUMP_FORCE);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                _isJumping = true;
+                rigidbody2D.linearVelocity = new Vector2(rigidbody2D.linearVelocity.x, JUMP_FORCE);
+            }
         }
     }
 
