@@ -90,6 +90,11 @@ PlasticSCM/
 # Cloud Build
 .cloud/
 
+#사용자별 에디터 레이아웃 무시
+UserSettings/Layouts/
+
+**/UserSettings/Layouts/
+
 # ============ 환경 설정 (보안) ============
 
 # 환경 설정
