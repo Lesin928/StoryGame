@@ -5,6 +5,9 @@ public class Player : MonoBehaviour
 {
     Rigidbody2D rigidbody2D;
     Vector2 moveInput;
+    SpriteRenderer spriter;
+    Animator anim;
+
 
     private bool _isJumping = false;
 
@@ -22,6 +25,8 @@ public class Player : MonoBehaviour
     void Awake()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+        spriter = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -56,6 +61,16 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             _isJumping = false;
+        }
+    }
+
+    void LateUpdate()
+    {
+        anim.SetFloat("Walk", moveInput.magnitude);
+
+        if (moveInput.x != 0)
+        {
+            spriter.flipX = moveInput.x < 0;
         }
     }
 }
