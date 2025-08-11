@@ -225,6 +225,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1209,7 +1222,51 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SciFiFurniture1.1_0: 6447637668161923714
+      SciFiFurniture1.1_1: -1260650766676718357
+      SciFiFurniture1.1_10: -1168321075244957893
+      SciFiFurniture1.1_11: 8286675308567212593
+      SciFiFurniture1.1_12: 3333845862038781818
+      SciFiFurniture1.1_13: -3414558708927063914
+      SciFiFurniture1.1_14: -559608754643248596
+      SciFiFurniture1.1_15: 744622336150303174
+      SciFiFurniture1.1_16: 6805600841348329287
+      SciFiFurniture1.1_17: 727253694634859880
+      SciFiFurniture1.1_18: -6691421106367855794
+      SciFiFurniture1.1_19: 186904358058348739
+      SciFiFurniture1.1_2: 4762145923335655740
+      SciFiFurniture1.1_20: -4984782509860468080
+      SciFiFurniture1.1_21: -3027045966242685916
+      SciFiFurniture1.1_22: -2901475373655329746
+      SciFiFurniture1.1_23: -2723048078725837247
+      SciFiFurniture1.1_24: -8702192211329520086
+      SciFiFurniture1.1_25: 7343342252077352786
+      SciFiFurniture1.1_26: 888338300446657012
+      SciFiFurniture1.1_27: -3716084708676055516
+      SciFiFurniture1.1_28: 5636480350133419254
+      SciFiFurniture1.1_29: -6797001341905074934
+      SciFiFurniture1.1_3: -8177795865365048972
+      SciFiFurniture1.1_30: -411225815041203014
+      SciFiFurniture1.1_31: 8639226925446376420
+      SciFiFurniture1.1_32: -2878122426190875547
+      SciFiFurniture1.1_33: 5897876363648021976
+      SciFiFurniture1.1_34: 2090175137494704080
+      SciFiFurniture1.1_35: 6633511467095866762
+      SciFiFurniture1.1_36: 7046449956359363292
+      SciFiFurniture1.1_37: 744645010176640868
+      SciFiFurniture1.1_38: -8946059001230363886
+      SciFiFurniture1.1_39: -6447591006361280252
+      SciFiFurniture1.1_4: 4134312588122982443
+      SciFiFurniture1.1_40: 4491965173436265290
+      SciFiFurniture1.1_41: 6777516284713345473
+      SciFiFurniture1.1_42: 3870825393882728538
+      SciFiFurniture1.1_43: 7500949289917690530
+      SciFiFurniture1.1_5: 3028095524763041244
+      SciFiFurniture1.1_6: -2500118141994227733
+      SciFiFurniture1.1_7: 7773875062847248248
+      SciFiFurniture1.1_8: 8042404512326194674
+      SciFiFurniture1.1_9: 262900476986691531
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
