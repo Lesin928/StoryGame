@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
         rigidbody2D = GetComponent<Rigidbody2D>();
         spriter = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        anim.applyRootMotion = false;
     }
 
     void FixedUpdate()
@@ -37,6 +38,7 @@ public class Player : MonoBehaviour
     public void OnMove(InputValue inputValue)
     {
         moveInput = inputValue.Get<Vector2>();
+        Debug.Log($"OnMove {moveInput} | anim.enabled={anim.enabled}. rootMotion={anim.applyRootMotion}");
     }
 
     public void OnWalk(InputValue inputValue)
