@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
     public void OnMove(InputValue inputValue)
     {
         moveInput = inputValue.Get<Vector2>();
+        Debug.Log($"OnMove {moveInput} | anim.enabled={anim.enabled}. rootMotion={anim.applyRootMotion}");
     }
 
     public void OnWalk(InputValue inputValue)
