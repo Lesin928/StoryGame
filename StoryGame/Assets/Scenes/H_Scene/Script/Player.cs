@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
         rigidbody2D = GetComponent<Rigidbody2D>();
         spriter = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        anim.applyRootMotion = false;
     }
 
     void FixedUpdate()
