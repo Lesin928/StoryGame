@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -21,6 +22,7 @@ public class Player : MonoBehaviour
     float CurrentSpeed => IsSlowingDown ? SlowSpeed : MoveSpeed;
 
     bool IsSlowingDown = false;
+    bool canAttack = true;
 
     void Awake()
     {
@@ -57,6 +59,25 @@ public class Player : MonoBehaviour
             }
         }
     }
+
+    public void OnAction(InputValue inputValue)
+    {
+        if (inputValue.isPressed && canAttack)
+        {
+            canAttack = false;
+            anim.SetTrigger("punch");
+            StartCoroutine(ResetAttackCooldown());
+        }
+    }
+
+    IEnumerator ResetAttackCooldown()
+    {
+        yield return new WaitForSeconds(0.1f);
+        canAttack = true;
+    }
+    
+
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
